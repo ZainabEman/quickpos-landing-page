@@ -49,9 +49,21 @@
         </div>
     </header>
 
-    <!-- Main Content (placeholder for future sections) -->
+    <!-- Main Content -->
     <main class="main-content">
-        <!-- Content will be added in future epics -->
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Transform Your Business with Smart Point of Sale</h1>
+                    <p class="hero-subheadline">Streamline operations, boost sales, and delight customers with our all-in-one POS solution designed for modern retailers.</p>
+                    <a href="#signup" class="btn-hero-cta">Get Started Free</a>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="https://via.placeholder.com/600x400/1F2937/4ADE80?text=QuickPOS+Dashboard" alt="QuickPOS Dashboard Mockup" class="hero-image">
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="assets/js/main.js"></script>
