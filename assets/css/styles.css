@@ -465,6 +465,302 @@ body {
 }
 
 /* ============================================
+   Pricing Section
+   ============================================ */
+
+.pricing {
+    background: var(--bg-primary);
+    padding: 100px 0;
+    position: relative;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.pricing-title {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to right, var(--accent-color), #a5b4fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    letter-spacing: -1px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.pricing-card {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(74, 222, 128, 0.15);
+}
+
+.pricing-card-pro {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.2);
+}
+
+.pricing-card-pro:hover {
+    box-shadow: 0 10px 50px rgba(74, 222, 128, 0.3);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-plan-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.pricing-card-pro .pricing-plan-name {
+    margin-top: 8px;
+}
+
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.price-amount {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.price-period {
+    font-size: 18px;
+    color: #9CA3AF;
+    font-weight: 500;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pricing-features li {
+    color: #9CA3AF;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-left: 24px;
+    position: relative;
+}
+
+.pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btn-pricing-cta {
+    display: block;
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.3);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-pricing-cta:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
+}
+
+.btn-pricing-cta:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+
+.contact {
+    background: var(--bg-primary);
+    padding: 100px 0;
+    position: relative;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-title {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to right, var(--accent-color), #a5b4fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    letter-spacing: -1px;
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    color: #9CA3AF;
+    text-align: center;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-form {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #9CA3AF;
+    margin: 0;
+}
+
+.form-input {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #6B7280;
+}
+
+.form-input:focus {
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.form-error {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #FCA5A5;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+.btn-contact-submit {
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.3);
+    transition: all 0.2s ease;
+    margin-top: 8px;
+}
+
+.btn-contact-submit:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
+}
+
+.btn-contact-submit:active {
+    transform: translateY(0);
+}
+
+/* ============================================
    Responsive Design
    ============================================ */
 
@@ -520,6 +816,39 @@ body {
 
     .features-container {
         gap: 50px;
+    }
+
+    .pricing {
+        padding: 80px 0;
+    }
+
+    .pricing-container {
+        gap: 50px;
+    }
+
+    .pricing-title {
+        font-size: 36px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .pricing-card-pro {
+        grid-column: span 2;
+    }
+
+    .contact {
+        padding: 80px 0;
+    }
+
+    .contact-title {
+        font-size: 36px;
+    }
+
+    .contact-form {
+        padding: 32px;
     }
 }
 
@@ -613,6 +942,39 @@ body {
     .feature-card {
         padding: 22px;
     }
+
+    .pricing {
+        padding: 60px 0;
+    }
+
+    .pricing-container {
+        gap: 40px;
+    }
+
+    .pricing-title {
+        font-size: 28px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pricing-card {
+        padding: 28px;
+    }
+
+    .pricing-card-pro {
+        grid-column: span 1;
+    }
+
+    .price-amount {
+        font-size: 40px;
+    }
+
+    .price-period {
+        font-size: 16px;
+    }
 }
 
 /* Small Mobile */
@@ -676,6 +1038,90 @@ body {
 
     .feature-description {
         font-size: 14px;
+    }
+
+    .pricing {
+        padding: 40px 0;
+    }
+
+    .pricing-container {
+        gap: 30px;
+    }
+
+    .pricing-title {
+        font-size: 24px;
+    }
+
+    .pricing-grid {
+        gap: 20px;
+    }
+
+    .pricing-card {
+        padding: 24px;
+    }
+
+    .pricing-plan-name {
+        font-size: 1.2rem;
+    }
+
+    .price-amount {
+        font-size: 36px;
+    }
+
+    .price-period {
+        font-size: 14px;
+    }
+
+    .pricing-features {
+        gap: 12px;
+    }
+
+    .pricing-features li {
+        font-size: 14px;
+    }
+
+    .btn-pricing-cta {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact-container {
+        gap: 24px;
+    }
+
+    .contact-title {
+        font-size: 24px;
+    }
+
+    .contact-subtitle {
+        font-size: 15px;
+    }
+
+    .contact-form {
+        padding: 24px;
+        gap: 18px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .form-input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .form-textarea {
+        min-height: 100px;
+    }
+
+    .btn-contact-submit {
+        font-size: 0.95rem;
+        padding: 10px 20px;
     }
 }
 

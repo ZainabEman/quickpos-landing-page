@@ -117,6 +117,127 @@
                 </div>
             </div>
         </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="pricing-container container">
+                <h2 class="pricing-title">Choose Your Plan</h2>
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-plan-name">Basic</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$29</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Up to 2 POS terminals</li>
+                            <li>Basic inventory tracking</li>
+                            <li>Sales reports</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ul>
+                        <a href="#signup" class="btn-pricing-cta">Get Started</a>
+                    </div>
+
+                    <!-- Pro Plan (Highlighted) -->
+                    <div class="pricing-card pricing-card-pro">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3 class="pricing-plan-name">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$79</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Up to 10 POS terminals</li>
+                            <li>Advanced inventory management</li>
+                            <li>Real-time analytics dashboard</li>
+                            <li>Customer loyalty program</li>
+                            <li>Priority support</li>
+                            <li>API access</li>
+                            <li>Custom integrations</li>
+                        </ul>
+                        <a href="#signup" class="btn-pricing-cta">Get Started</a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-plan-name">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$199</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Unlimited POS terminals</li>
+                            <li>Enterprise inventory system</li>
+                            <li>Advanced analytics & AI insights</li>
+                            <li>Multi-location management</li>
+                            <li>Dedicated account manager</li>
+                            <li>Custom development</li>
+                            <li>24/7 phone support</li>
+                            <li>SLA guarantee</li>
+                        </ul>
+                        <a href="#signup" class="btn-pricing-cta">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-container container">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                
+                <?php if (isset($_GET['error'])): ?>
+                    <div class="form-error">
+                        <?php echo htmlspecialchars($_GET['error']); ?>
+                    </div>
+                <?php endif; ?>
+
+                <form action="process_contact.php" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="Your name"
+                            value="<?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : ''; ?>"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="your.email@example.com"
+                            value="<?php echo isset($_GET['email']) ? htmlspecialchars($_GET['email']) : ''; ?>"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-input form-textarea" 
+                            rows="6" 
+                            placeholder="Tell us how we can help..."
+                            required
+                        ><?php echo isset($_GET['message']) ? htmlspecialchars($_GET['message']) : ''; ?></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-contact-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <script src="assets/js/main.js"></script>
