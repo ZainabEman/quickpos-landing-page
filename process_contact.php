@@ -57,3 +57,9 @@ header('Location: thank-you.html');
 exit;
 ?>
 
+bug 1
+bug2
+bug3
+bug4
+bug5
+bug6
