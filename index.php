@@ -244,7 +244,7 @@
     <footer class="footer">
         <div class="footer-container container">
             <div class="footer-content">
-                <p class="footer-copyright">&copy; <?php echo date('Y'); ?> QuickPOS. All rights reserved.</p>
+                <p class="footer-copyright">&copy; <?php echo date('Y'); ?> QuickPOS. All rights reserved..</p>
                 <div class="footer-social">
                     <a href="#" class="social-link" aria-label="Facebook">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
